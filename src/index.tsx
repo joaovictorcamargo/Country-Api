@@ -3,15 +3,17 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 
-/* import makeStore from './redux/store' */
+import makeStore from "./redux/store";
 
 import App from "./App";
 
-/* const store = makeStore();
- */
+const store = makeStore();
+
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
   document.getElementById("root")
 );
