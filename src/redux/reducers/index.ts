@@ -1,14 +1,14 @@
 import { combineReducers } from "redux";
 
-/* import countryReducer from "./CountryReducer";
-import cartReducer from "./CartReducer";
+import countryReducer from "./CoutryReducer";
+/* import cartReducer from "./CartReducer";
 import uiReducer from "./UiReducer"; */
 
 const rootReducer = () =>
   combineReducers({
-    /*     countryReducer,
-    cartReducer,
-    uiReducer, */
+    countryReducer,
+    /*  cartReducer,
+    uiReducer,  */
   });
 
 export default rootReducer;

@@ -3,9 +3,7 @@ import thunk from "redux-thunk";
 
 import rootReducer from "./reducers";
 
-const initState = {
-  testName: "",
-};
+const initState = {};
 
 export default function makeStore(initialState = initState) {
   const middlewares = [thunk];
