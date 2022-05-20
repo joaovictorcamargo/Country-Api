@@ -6,9 +6,9 @@ import Country from "./pages/Country/Country";
 
 const Routes = () => (
   <Switch>
-    {/* render all Switch here */}
-    <Route exact path="/" component={Home} />
-    <Route path="/country/:name" component={Country} />
+    {/* render all routes here */}
+    <Route exact path="/" element={<Home />} />
+    <Route path="/country/:name" element={<Country />} />
   </Switch>
 );
 
