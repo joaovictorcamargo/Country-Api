@@ -8,7 +8,7 @@ import Routes from "./Routes";
 import Sidebar from './components/Sidebar/Sidebar' */
 
 //base style
-/* import "./styles/_base.scss"; */
+import "./styles/_base.scss";
 
 //create material UI theme
 const theme = createTheme({
