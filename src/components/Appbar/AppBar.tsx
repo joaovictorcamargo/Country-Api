@@ -13,13 +13,13 @@ interface AppbarProps {
   drawerState: boolean;
 }
 
-const Appbar = (/* props: AppbarProps */) => {
-  /*  const { onClick, drawerState } = props; */
+const Appbar = (props: AppbarProps) => {
+  const { onClick, drawerState } = props;
 
   /*   const cart = useSelector((state: AppState) => state.cartReducer.cart); */
 
   const onDrawerClick = () => {
-    /* onClick(!drawerState); */
+    onClick(!drawerState);
   };
 
   //cart menu open related state and functions
