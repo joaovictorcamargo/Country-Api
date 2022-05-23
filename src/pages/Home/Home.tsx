@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 /* import CountryList from '../../components/CountryList/CountryList' */
 import AppBar from "../../components/Appbar/AppBar";
 import { fetchAllCountries } from "../../redux/actions";
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 import "./home.scss";
 
 const Home = () => {
+  const [drawerState, setDrawerState] = useState(false);
+
+  const handleDrawerState = (state: boolean) => {
+    setDrawerState(state);
+  };
+
   //initialize dispatch
   const dispatch = useDispatch();
 
@@ -19,7 +26,8 @@ const Home = () => {
     <div className="home">
       {/* Inner contents country list/result */}
       {/*  <CountryList/> */}
-      <AppBar />
+      <AppBar drawerState={drawerState} onClick={handleDrawerState} />
+      <Sidebar drawerState={drawerState} onClick={handleDrawerState} />
     </div>
   );
 };
