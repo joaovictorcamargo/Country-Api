@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 /* import CountryList from '../../components/CountryList/CountryList' */
-
+import AppBar from "../../components/Appbar/AppBar";
 import { fetchAllCountries } from "../../redux/actions";
 
-/* import "./home.scss"; */
+import "./home.scss";
 
 const Home = () => {
   //initialize dispatch
@@ -19,7 +19,7 @@ const Home = () => {
     <div className="home">
       {/* Inner contents country list/result */}
       {/*  <CountryList/> */}
-      <div>oiiiiiiii</div>
+      <AppBar />
     </div>
   );
 };
