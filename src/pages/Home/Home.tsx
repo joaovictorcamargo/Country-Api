@@ -6,6 +6,7 @@ import { fetchAllCountries } from "../../redux/actions";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
 import "./home.scss";
+import CountryCard from "../../components/CountryCard/CountryCard";
 
 const Home = () => {
   const [drawerState, setDrawerState] = useState(false);
@@ -28,6 +29,8 @@ const Home = () => {
       {/*  <CountryList/> */}
       <AppBar drawerState={drawerState} onClick={handleDrawerState} />
       <Sidebar drawerState={drawerState} onClick={handleDrawerState} />
+
+      <div className="home__contents"></div>
     </div>
   );
 };
