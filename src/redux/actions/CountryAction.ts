@@ -2,7 +2,6 @@ import {
   FETCH_COUNTRIES,
   FETCH_COUNTRIES_FAILURE,
   FETCH_COUNTRIES_SUCCESS,
-  FetchAllCountriesAction,
   CountryActions,
 } from "../../types";
 

@@ -1,7 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
-import { AppState } from "../../types";
 import { FaShoppingCart } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 
@@ -16,24 +14,11 @@ interface AppbarProps {
 const Appbar = (props: AppbarProps) => {
   const { onClick, drawerState } = props;
 
-  /*   const cart = useSelector((state: AppState) => state.cartReducer.cart); */
-
   const onDrawerClick = () => {
     onClick(!drawerState);
   };
 
-  //cart menu open related state and functions
-
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const menuOpen = Boolean(anchorEl);
-
-  const handleCartMenuClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleCartMenuClose = () => {
-    setAnchorEl(null);
-  };
+  const handleCartMenuClick = (event: React.MouseEvent<HTMLElement>) => {};
 
   return (
     <div className="appbar">
@@ -47,23 +32,8 @@ const Appbar = (props: AppbarProps) => {
         </div>
 
         <div className="appbar__content-right">
-          {/*  <CartMenu
-            cart={cart}
-            onClick={handleCartMenuClose}
-            menuOpen={menuOpen}
-            anchorEl={anchorEl}
-          /> */}
-
           <div className="appbar__content-cart" onClick={handleCartMenuClick}>
             <FaShoppingCart size={24} className="cursor-pointer" />
-
-            {/*  <div
-              className={`appbar__content-cart-counter cursor-pointer ${
-                cart.length > 0 ? "active" : ""
-              }`}
-            >
-              {cart && cart.length}
-            </div> */}
           </div>
 
           <AiOutlineMenu
